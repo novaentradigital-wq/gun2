@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim | TaşıNet Lojistik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-truck-moving"></i>
+        TaşıNet
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="hizmetler.html">Hizmetler</a>
+        <a href="talep.html">Yük Talebi</a>
+        <a href="iletisim.html" class="active">İletişim</a>
+        <a href="talep.html" class="btn-nav">Hemen Teklif Al</a>
+      </div>
+      <button class="hamburger" aria-label="Menü">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>İletişim</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Ana Sayfa</a>
+        <span>/</span>
+        <span>İletişim</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="fade-in">
+          <h2 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 10px;">Bize Ulaşın</h2>
+          <p style="color: var(--text-light); margin-bottom: 30px;">Sorularınız, önerileriniz veya teklif talepleriniz için bizimle iletişime geçebilirsiniz.</p>
+
+          <div class="contact-info-cards">
+            <div class="contact-info-card">
+              <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <h4>Adres</h4>
+                <p>Atatürk Mah. Lojistik Cad. No:42<br>Beylikdüzü / İstanbul</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="info-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Telefon</h4>
+                <p>+90 (212) 555 00 00<br>+90 (532) 555 00 01</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>E-posta</h4>
+                <p>info@tasinet.com.tr<br>destek@tasinet.com.tr</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="info-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <h4>Çalışma Saatleri</h4>
+                <p>Pazartesi - Cumartesi: 08:00 - 18:00<br>Pazar: Kapalı</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div class="map-placeholder">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Harita Alanı (Google Maps)</span>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="fade-in">
+          <div style="background: var(--bg-light); padding: 40px; border-radius: var(--radius);">
+            <h3 style="color: var(--primary); margin-bottom: 5px; font-size: 1.4rem;">Mesaj Gönderin</h3>
+            <p style="color: var(--text-light); margin-bottom: 25px; font-size: 0.93rem;">Formu doldurun, en kısa sürede dönüş yapalım.</p>
+
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label>Ad Soyad <span class="required">*</span></label>
+                <input type="text" name="ad" placeholder="Adınız ve soyadınız" required>
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <label>E-posta <span class="required">*</span></label>
+                <input type="email" name="email" placeholder="ornek@email.com" required>
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <label>Konu</label>
+                <input type="text" name="konu" placeholder="Mesajınızın konusu">
+              </div>
+              <div class="form-group">
+                <label>Mesajınız <span class="required">*</span></label>
+                <textarea name="mesaj" placeholder="Mesajınızı buraya yazınız..." required></textarea>
+                <span class="error-message"></span>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                <i class="fas fa-paper-plane"></i> Gönder
+              </button>
+            </form>
+
+            <div class="form-success" id="contactSuccess">
+              <i class="fas fa-check-circle"></i>
+              <h3>Mesajınız Gönderildi!</h3>
+              <p>En kısa sürede size geri dönüş yapacağız. Teşekkürler.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <i class="fas fa-truck-moving"></i> TaşıNet
+          </div>
+          <p>Türkiye genelinde ve uluslararası hatlarda güvenilir karayolu taşımacılığı ve lojistik çözümleri sunan öncü firmayız.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Hızlı Linkler</h3>
+          <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="hizmetler.html">Hizmetler</a></li>
+            <li><a href="talep.html">Yük Talebi</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Hizmetler</h3>
+          <ul>
+            <li><a href="hizmetler.html">Parsiyel Taşımacılık</a></li>
+            <li><a href="hizmetler.html">Komple Taşımacılık</a></li>
+            <li><a href="hizmetler.html">Uluslararası</a></li>
+            <li><a href="hizmetler.html">Soğuk Zincir</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>İletişim</h3>
+          <div class="contact-item">
+            <i class="fas fa-location-dot"></i>
+            <span>İstanbul, Türkiye<br>Atatürk Mah. Lojistik Cad. No:42</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+90 (212) 555 00 00</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@tasinet.com.tr</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 TaşıNet Lojistik. Tüm hakları saklıdır.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

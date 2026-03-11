@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yük Talebi | TaşıNet Lojistik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-truck-moving"></i>
+        TaşıNet
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="hizmetler.html">Hizmetler</a>
+        <a href="talep.html" class="active">Yük Talebi</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="talep.html" class="btn-nav">Hemen Teklif Al</a>
+      </div>
+      <button class="hamburger" aria-label="Menü">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Yük / Taşıma Talebi</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Ana Sayfa</a>
+        <span>/</span>
+        <span>Yük Talebi</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request Form -->
+  <section class="section">
+    <div class="container">
+      <div class="form-section fade-in">
+        <div class="section-header">
+          <h2>Taşıma Talebi Oluşturun</h2>
+          <p>Aşağıdaki formu doldurarak ücretsiz teklif alabilirsiniz. En kısa sürede sizinle iletişime geçeceğiz.</p>
+          <span class="line"></span>
+        </div>
+
+        <form id="talepForm" novalidate>
+          <!-- Gönderen Bilgileri -->
+          <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 1.2rem;">
+            <i class="fas fa-user" style="color: var(--accent); margin-right: 8px;"></i>Gönderen Bilgileri
+          </h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Ad Soyad <span class="required">*</span></label>
+              <input type="text" name="ad" placeholder="Adınız ve soyadınız" required>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label>Telefon <span class="required">*</span></label>
+              <input type="tel" name="telefon" placeholder="05XX XXX XX XX" required>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group full-width">
+              <label>E-posta <span class="required">*</span></label>
+              <input type="email" name="email" placeholder="ornek@email.com" required>
+              <span class="error-message"></span>
+            </div>
+          </div>
+
+          <!-- Adres Bilgileri -->
+          <h3 style="color: var(--primary); margin: 30px 0 20px; font-size: 1.2rem;">
+            <i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 8px;"></i>Adres Bilgileri
+          </h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Yükleme Şehri <span class="required">*</span></label>
+              <select name="yukleme_sehir" required>
+                <option value="">Şehir Seçiniz</option>
+                <option value="istanbul">İstanbul</option>
+                <option value="ankara">Ankara</option>
+                <option value="izmir">İzmir</option>
+                <option value="bursa">Bursa</option>
+                <option value="antalya">Antalya</option>
+                <option value="adana">Adana</option>
+                <option value="konya">Konya</option>
+                <option value="gaziantep">Gaziantep</option>
+                <option value="kocaeli">Kocaeli</option>
+                <option value="mersin">Mersin</option>
+                <option value="diger">Diğer</option>
+              </select>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label>Yükleme İlçesi</label>
+              <input type="text" name="yukleme_ilce" placeholder="İlçe adı">
+            </div>
+            <div class="form-group">
+              <label>Teslimat Şehri <span class="required">*</span></label>
+              <select name="teslimat_sehir" required>
+                <option value="">Şehir Seçiniz</option>
+                <option value="istanbul">İstanbul</option>
+                <option value="ankara">Ankara</option>
+                <option value="izmir">İzmir</option>
+                <option value="bursa">Bursa</option>
+                <option value="antalya">Antalya</option>
+                <option value="adana">Adana</option>
+                <option value="konya">Konya</option>
+                <option value="gaziantep">Gaziantep</option>
+                <option value="kocaeli">Kocaeli</option>
+                <option value="mersin">Mersin</option>
+                <option value="diger">Diğer</option>
+              </select>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label>Teslimat İlçesi</label>
+              <input type="text" name="teslimat_ilce" placeholder="İlçe adı">
+            </div>
+          </div>
+
+          <!-- Yük Bilgileri -->
+          <h3 style="color: var(--primary); margin: 30px 0 20px; font-size: 1.2rem;">
+            <i class="fas fa-box" style="color: var(--accent); margin-right: 8px;"></i>Yük Bilgileri
+          </h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Yük Türü <span class="required">*</span></label>
+              <select name="yuk_turu" required>
+                <option value="">Yük Türü Seçiniz</option>
+                <option value="genel">Genel Yük</option>
+                <option value="gida">Gıda Ürünleri</option>
+                <option value="tekstil">Tekstil</option>
+                <option value="insaat">İnşaat Malzemesi</option>
+                <option value="elektronik">Elektronik</option>
+                <option value="kimyasal">Kimyasal Madde</option>
+                <option value="makine">Makine / Ağır Yük</option>
+                <option value="soguk">Soğuk Zincir Ürün</option>
+                <option value="diger">Diğer</option>
+              </select>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label>Taşıma Türü <span class="required">*</span></label>
+              <select name="tasima_turu" required>
+                <option value="">Taşıma Türü Seçiniz</option>
+                <option value="parsiyel">Parsiyel</option>
+                <option value="komple">Komple (FTL)</option>
+                <option value="uluslararasi">Uluslararası</option>
+                <option value="soguk_zincir">Soğuk Zincir</option>
+              </select>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label>Yük Ağırlığı (kg)</label>
+              <input type="number" name="agirlik" placeholder="Tahmini ağırlık (kg)">
+            </div>
+            <div class="form-group">
+              <label>Yük Hacmi (m³)</label>
+              <input type="number" name="hacim" placeholder="Tahmini hacim (m³)">
+            </div>
+            <div class="form-group">
+              <label>Tercih Edilen Tarih</label>
+              <input type="date" name="tarih">
+            </div>
+            <div class="form-group full-width">
+              <label>Ek Notlar</label>
+              <textarea name="notlar" placeholder="Yükünüz hakkında eklemek istediğiniz bilgiler..."></textarea>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 20px;">
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Talebi Gönder
+            </button>
+          </div>
+        </form>
+
+        <div class="form-success" id="talepSuccess">
+          <i class="fas fa-check-circle"></i>
+          <h3>Talebiniz Başarıyla Gönderildi!</h3>
+          <p>En kısa sürede ekibimiz sizinle iletişime geçecektir. Teşekkür ederiz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <i class="fas fa-truck-moving"></i> TaşıNet
+          </div>
+          <p>Türkiye genelinde ve uluslararası hatlarda güvenilir karayolu taşımacılığı ve lojistik çözümleri sunan öncü firmayız.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Hızlı Linkler</h3>
+          <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="hizmetler.html">Hizmetler</a></li>
+            <li><a href="talep.html">Yük Talebi</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Hizmetler</h3>
+          <ul>
+            <li><a href="hizmetler.html">Parsiyel Taşımacılık</a></li>
+            <li><a href="hizmetler.html">Komple Taşımacılık</a></li>
+            <li><a href="hizmetler.html">Uluslararası</a></li>
+            <li><a href="hizmetler.html">Soğuk Zincir</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>İletişim</h3>
+          <div class="contact-item">
+            <i class="fas fa-location-dot"></i>
+            <span>İstanbul, Türkiye<br>Atatürk Mah. Lojistik Cad. No:42</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+90 (212) 555 00 00</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@tasinet.com.tr</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 TaşıNet Lojistik. Tüm hakları saklıdır.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
